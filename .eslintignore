@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+/dist
+/tests
+vue.config.js
+# local test files (Steffen)
+*.d.ts
+

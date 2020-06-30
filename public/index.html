@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"
+    />
+    <title>Test</title>
+  </head>
+
+  <body onload="detectIE()">
+    <noscript>
+      <strong
+        >We're sorry but template doesn't work properly without JavaScript enabled. Please enable it
+        to continue.</strong
+      >
+    </noscript>
+    <script type="text/javascript">
+      function noBack() {
+        window.history.forward();
+      }
+      noBack();
+      window.onload = noBack;
+      window.onpageshow = function(evt) {
+        if (evt.persisted) noBack();
+      };
+      window.onunload = function() {
+        void 0;
+      };
+    </script>
+    <!-- Detect terminal -->
+    <script>
+      function detectIE() {
+        const ua = window.navigator.userAgent;
+        const msie = ua.indexOf('MSIE ');
+        if (msie > 0) {
+          // IE 10 or older => return version number
+          alert(
+            'Not supported version : ' +
+              parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10) +
+              ' Please use another browser like: Chrome or Firefox',
+          );
+        }
+        const trident = ua.indexOf('Trident/');
+        if (trident > 0) {
+          // IE 11 => return version number
+          const rv = ua.indexOf('rv:');
+          alert(
+            'Not supported version : ' +
+              parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10) +
+              ' Please use another browser like: Chrome or Firefox',
+          );
+        }
+        const edge = ua.indexOf('Edge/');
+        if (edge > 0) {
+          // Edge (IE 12+) => return version number
+          alert(
+            'Not supported version : ' +
+              parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10) +
+              ' Please use another browser like: Chrome or Firefox',
+          );
+        }
+      }
+    </script>
+    <!-- End of script Detect terminal -->
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
