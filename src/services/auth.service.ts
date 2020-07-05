@@ -3,7 +3,8 @@ export interface AuthContext {
   getUserInfo(): Promise<string>;
 }
 
-const AuthContextKey: InjectionKey<AuthContext> = Symbol('auth');
+export const AuthContextKey: InjectionKey<AuthContext> = Symbol('auth');
+
 export function provideAuth() {
   const getUserInfo = async () => {
     return 'John Doe';
